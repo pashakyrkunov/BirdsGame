@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <script src="js/jQuery.js"></script>
+ <script src="js/jcanvas.min.js"></script>
+ <link href="css/styles.css" rel="stylesheet">
+ <title>Flappy Bird!</title>
+ <script>
+
+    window.onload = function() {
+    var timerId = setTimeout(game_over, 3000);
+    }
+
+    function game_over() {
+        window.sessionStorage.removeItem('score_after');
+        window.location.href = 'index.html';
+    }
+  </script>
+</head>
+<body>
+    <body id="menu_body">
+    <p id="die_title">Game over!</p>
+    <p id ="score_title_aft">
+      Your score:
+      <script>document.write(window.sessionStorage.score_after);</script>
+  </p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/menu.js"></script>
+    <title>Flappy Bird!</title>
+</head>
+<body id="menu_body">
+
+<p id="menu_title">Menu</p>
+<p id="level_title">Level:</p>
+<button id="low_button">1</button>
+<button id="medium_button">2</button>
+<button id="hard_button">3</button>
+<button id="dark_bg_button">Sunset Theme</button>
+<button id="light_bg_button">Sky Theme</button>
+
+<button id="start_button" onclick="window.location.href = 'Game.html'">Start!</button>
+<p id="score_title">Best score: 
+    <script>
+        if (window.localStorage.best_score === undefined) {
+            document.write('0');
+        }
+        else {
+        document.write(window.localStorage.best_score)
+        }
+    </script></p>
+
+</body>
+</html>
